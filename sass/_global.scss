@@ -44,59 +44,12 @@ body {
 }
 
 /*---Media Queries --*/
-@media (max-width: 576px) {
-  // header {
-  //   .menu-item {
-  //     padding-bottom: 10px;
-  //   }
-  // }
-
-  // .section {
-  //   .left-column {
-  //     padding-bottom: 60px;
-  //   }
-  // }
-
-  // .contact {
-  //   &-required {
-  //     flex-direction: column;
-  //   }
-  //   &-info {
-  //     padding: 5px 0;
-  //   }
-  // }
-
-  // .contact-info-menu {
-  //   .menu-items {
-  //     flex-direction: column;
-  //   }
-  //   .menu-item {
-  //     padding-bottom: 5px;
-  //   }
-  // }
-
-  // .footer-main {
-  //   .footer-column {
-  //     padding-bottom: 20px;
-  //   }
-  // }
-
-  // .footer-bottom {
-  //   .footer-col {
-  //     padding-top: 20px;
-  //   }
-  // }
-}
-
 @media (min-width: 576px) {
-  // header {
-  //     .header-menu {
-  //       flex-direction: column;
-  //     }
-  //   .menu-item {
-  //     padding-bottom: 10px;
-  //   }
-  // }
+  .menu {
+    &__navbar {
+      width: 200px;
+    }
+  }
 
   .section {
     .left-column {
@@ -186,6 +139,14 @@ body {
   .footer-main {
     &__column {
       padding-bottom: 0;
+    }
+  }
+  .menu {
+    &__row {
+      align-items: center;
+    }
+    &__navbar {
+      width: 100%;
     }
   }
 }

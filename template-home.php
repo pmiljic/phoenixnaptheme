@@ -8,7 +8,7 @@ Template Name: Home
 
 <section class="menu">
     <div class="container-fluid">
-        <div class="row justify-content-between align-items-center">
+        <div class="row menu__row justify-content-between">
             <?php get_template_part('includes/section', 'menu'); ?>
         </div>
     </div>
