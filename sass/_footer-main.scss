@@ -1,0 +1,15 @@
+.footer-main {
+  background-color: #1c1d1f;
+  padding: 60px;
+  padding-left: 90px;
+
+  a {
+    color: $color-footer-links;
+    padding-bottom: 12px;
+    font-size: 14px;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
