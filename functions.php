@@ -47,6 +47,20 @@ function crb_attach_theme_options()
             Field::make('image', 'crb_banner_photo', __('Photo', 'phoenixnaptheme'))
                 ->set_value_type('url')
         ));
+    Container::make('post_meta', 'Custom Data', __('Custom Data', 'phoenixnaptheme'))
+        ->where('post_type', '=', 'sections')
+        ->add_fields(array(
+            Field::make('complex', 'crb_feature_list',  __('Feature list', 'phoenixnaptheme'))
+                ->add_fields(array(
+                    Field::make('text', 'list_item', __('List item', 'phoenixnaptheme'))
+                )),
+            Field::make('complex', 'crb_company_logos',  __('Company Links', 'phoenixnaptheme'))
+                ->add_fields(array(
+                    Field::make('image', 'company_logo', __('Company Logo', 'phoenixnaptheme'))
+                        ->set_value_type('url'),
+                    Field::make('text', 'link', __('Link', 'phoenixnaptheme'))
+                ))
+        ));
 }
 
 add_action('after_setup_theme', 'crb_load');
@@ -63,3 +77,24 @@ register_nav_menus(
     )
 
 );
+
+// Custom post type
+function custom_post_type()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Sections',
+            'singular_name' => 'Section',
+        ),
+        'hierarchical' => true, //false post, true page
+        'public' => true,
+        'menu_icon' => 'dashicons-admin-multisite',
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+    );
+    register_post_type('sections', $args);
+}
+add_action('init', 'custom_post_type');
+
+// Theme Options
+add_theme_support('post-thumbnails');

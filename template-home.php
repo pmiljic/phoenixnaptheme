@@ -16,4 +16,5 @@ Template Name: Home
 
 <main>
     <?php get_template_part('includes/section', 'banner'); ?>
+    <?php get_template_part('includes/section', 'sections'); ?>
 </main>
