@@ -37,6 +37,15 @@ function crb_attach_theme_options()
                 )),
             Field::make('image', 'crb_menu_logo_photo',  __('Logo', 'phoenixnaptheme'))
                 ->set_value_type('url'),
+            Field::make('complex', 'crb_slide', __('Slider', 'phoenixnaptheme'))
+                ->add_fields(array(
+                    Field::make('text', 'pre_title', __('Pre Title', 'phoenixnaptheme')),
+                    Field::make('text', 'title', __('Title', 'phoenixnaptheme')),
+                    Field::make('text', 'caption', __('Caption', 'phoenixnaptheme')),
+                    Field::make('text', 'btn_text', __('Button Text', 'phoenixnaptheme')),
+                )),
+            Field::make('image', 'crb_banner_photo', __('Photo', 'phoenixnaptheme'))
+                ->set_value_type('url')
         ));
 }
 

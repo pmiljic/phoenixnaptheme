@@ -28,8 +28,8 @@
                         <?php if (sizeof($contact_menu) > 0) : ?>
                             <?php foreach ($contact_menu as $menu_item) : ?>
                                 <div class="header-menu__item d-flex align-items-center">
-                                    <i class="far fa-<?php echo esc_html($menu_item['icon_name']) ?>"></i>
-                                    <a href="#" class="header-href"><?php echo esc_html($menu_item['title']) ?></a>
+                                    <i class="far fa-<?php esc_html_e($menu_item['icon_name']) ?>"></i>
+                                    <a href="#" class="header-href"><?php esc_html_e($menu_item['title']) ?></a>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>

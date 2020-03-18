@@ -13,3 +13,7 @@ Template Name: Home
         </div>
     </div>
 </section>
+
+<main>
+    <?php get_template_part('includes/section', 'banner'); ?>
+</main>
