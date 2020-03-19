@@ -45,7 +45,24 @@ function crb_attach_theme_options()
                     Field::make('text', 'btn_text', __('Button Text', 'phoenixnaptheme')),
                 )),
             Field::make('image', 'crb_banner_photo', __('Photo', 'phoenixnaptheme'))
-                ->set_value_type('url')
+                ->set_value_type('url'),
+            Field::make('text', 'crb_contact_form_title', __('Contact Form Title', 'phoenixnaptheme')),
+            Field::make('complex', 'crb_contact_form_description',  __('Contact Form Description', 'phoenixnaptheme'))
+                ->add_fields(array(
+                    Field::make('text', 'paragraph', __('Description', 'phoenixnaptheme'))
+                )),
+            Field::make('text', 'crb_contact_form_max_chars', __('Contact Form Tell us max characters (Number)', 'phoenixnaptheme')),
+            Field::make('color', 'crb_contact_info_color', __('Contact Info Color', 'phoenixnaptheme')),
+            Field::make('image', 'crb_footer_logo_photo',  __('Footer Logo', 'phoenixnaptheme'))
+                ->set_value_type('url'),
+            Field::make('text', 'crb_copyrights', __('Copyrights', 'citadelatheme')),
+            Field::make('text', 'crb_google_plus', __('Google+ link', 'citadelatheme')),
+            Field::make('text', 'crb_facebook', __('Facebook link', 'citadelatheme')),
+            Field::make('text', 'crb_dribble', __('Dribble link', 'citadelatheme')),
+            Field::make('text', 'crb_twitter', __('Twitter link', 'citadelatheme')),
+            Field::make('text', 'crb_instagram', __('Instagram link', 'citadelatheme')),
+
+
         ));
     Container::make('post_meta', 'Custom Data', __('Custom Data', 'phoenixnaptheme'))
         ->where('post_type', '=', 'sections')
@@ -74,6 +91,7 @@ function crb_load()
 register_nav_menus(
     array(
         'top-menu' => __('Top Menu Location', 'phoenixnaptheme'),
+        'footer-menu' => __('Footer Menu Location', 'phoenixnaptheme'),
     )
 
 );
@@ -98,3 +116,4 @@ add_action('init', 'custom_post_type');
 
 // Theme Options
 add_theme_support('post-thumbnails');
+add_theme_support('widgets');

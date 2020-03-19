@@ -7,6 +7,11 @@
     padding: 0 80px;
     &__div-padding {
       padding: 5px 15px;
+      &__caret {
+        position: absolute;
+        right: 30px;
+        bottom: 15px;
+      }
     }
   }
 
@@ -30,13 +35,29 @@
     height: 45px;
     border: 1px solid #ececec;
 
+    &-select {
+      color: $color-contact-placeholder;
+      font-style: italic;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    &-select::-ms-expand {
+      display: none;
+    }
+
     &-more {
       resize: none;
       height: 110px;
     }
+
+    &-more::placeholder {
+      color: $color-contact-placeholder;
+      font-style: italic;
+    }
   }
   input::placeholder {
-    color: #acacac;
+    color: $color-contact-placeholder;
     font-style: italic;
   }
 

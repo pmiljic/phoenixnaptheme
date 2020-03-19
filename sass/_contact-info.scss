@@ -1,5 +1,4 @@
 .contact-info-menu {
-  background-color: #016ba7;
   padding: 30px 40px;
 
   &__menu-item {
@@ -17,7 +16,6 @@
     color: $white;
     font-weight: 400;
     &:hover {
-      color: $color-icon-light;
       text-decoration: none;
     }
   }

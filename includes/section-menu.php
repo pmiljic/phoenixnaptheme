@@ -1,8 +1,8 @@
 <?php
-$logo = (carbon_get_theme_option('crb_menu_logo_photo'));
+$logo = carbon_get_theme_option('crb_menu_logo_photo');
 ?>
 <div class="logo-div">
-    <a href="#" class="menu-logo"><img src=<?php esc_url_e($logo) ?>></a>
+    <a href="#" class="menu-logo"><img src=<?php echo esc_url($logo) ?>></a>
 </div>
 
 <div class="d-flex justify-content-end">
