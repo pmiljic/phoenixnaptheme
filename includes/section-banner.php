@@ -16,9 +16,9 @@ $inner_indicator_index = 0;
                                 <ul class="carousel-indicators">
                                     <?php foreach ($slides as $slide) : ?>
                                         <?php if ($indicator_index === 0) : ?>
-                                            <li data-target="#slides" data-slide-to="<?php esc_html_e($indicator_index) ?>" class="active"></li>
+                                            <li data-target="#slides" data-slide-to="<?php esc_attr_e($indicator_index) ?>" class="active"></li>
                                         <?php else : ?>
-                                            <li data-target="#slides" data-slide-to=<?php esc_html_e($indicator_index) ?>></li>
+                                            <li data-target="#slides" data-slide-to=<?php esc_attr_e($indicator_index) ?>></li>
                                         <?php endif; ?>
                                         <?php $indicator_index++ ?>
                                     <?php endforeach; ?>

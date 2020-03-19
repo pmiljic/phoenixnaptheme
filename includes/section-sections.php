@@ -40,7 +40,7 @@ if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_
                                     <p class="logos__text"><?php esc_html_e("As seen:") ?></p>
                                     <div class="d-flex justify-content-between align-items-center logos__items">
                                         <?php foreach ($logos as $logo) : ?>
-                                            <a href="<?php esc_html_e($logo["link"]) ?>" class="centralized">
+                                            <a href="<?php esc_url($logo["link"]) ?>" class="centralized">
                                                 <img src="<?php echo esc_url($logo["company_logo"]) ?>" target="_blank">
                                             </a>
                                         <?php endforeach; ?>
