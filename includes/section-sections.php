@@ -6,10 +6,12 @@ $args = array(
 $wp_query = new WP_Query($args);
 if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
         $feature_list = carbon_get_the_post_meta('crb_feature_list');
-        $logos = carbon_get_the_post_meta('crb_company_logos'); ?>
+        $logos = carbon_get_the_post_meta('crb_company_logos');
+        $image_order = carbon_get_the_post_meta('crb_reverse_image') === 'yes' ? 'flex-row-reverse' : '';
+?>
         <section class="section section__two">
             <div class="container">
-                <div class="row">
+                <div class="row <?php echo $image_order ?>">
 
                     <div class="col-lg-6 d-flex flex-column left-column">
                         <h2 class="section__title"><?php the_title(); ?></h2>

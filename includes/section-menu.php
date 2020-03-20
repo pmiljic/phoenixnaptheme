@@ -27,7 +27,21 @@ $logo = carbon_get_theme_option('crb_menu_logo_photo');
                     <i class="fa fa-search"></i>
                 </div>
             </button>
+            <form id="form1">
+                <div class="d-inline-flex menu__search-div">
+                    <input type="text" class="form-control" id="inputSearch" placeholder="<?php esc_attr_e('Search', 'phoenixnaptheme'); ?>">
+                    <button type="button" class="btn btn-primary menu__btn-submit">
+                        <?php esc_html_e("Search") ?>
+                    </button>
+                </div>
+            </form>
 
         </div>
     </nav>
 </div>
+
+<script>
+    $('.menu__btn-search').on('click', function(e) {
+        $('#form1').toggle();
+    });
+</script>

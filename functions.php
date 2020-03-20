@@ -76,6 +76,11 @@ function crb_attach_theme_options()
                     Field::make('image', 'company_logo', __('Company Logo', 'phoenixnaptheme'))
                         ->set_value_type('url'),
                     Field::make('text', 'link', __('Link', 'phoenixnaptheme'))
+                )),
+            Field::make('select', 'crb_reverse_image', __('Text - Image order', 'phoenixnaptheme'))
+                ->set_options(array(
+                    'no' => __('Normal order text - image', 'phoenixnaptheme'),
+                    'yes' => __('Reverse order image - text', 'phoenixnaptheme')
                 ))
         ));
 }
@@ -117,3 +122,14 @@ add_action('init', 'custom_post_type');
 // Theme Options
 add_theme_support('post-thumbnails');
 add_theme_support('widgets');
+
+
+function js_enqueue_scripts()
+{
+    wp_enqueue_script("my-ajax-handle", get_stylesheet_directory_uri() . "/assets/js/ajax.js", array('jquery'), '1.0', true);
+    wp_localize_script('my-ajax-handle', 'js', [
+        'ajaxurl' =>  admin_url('admin-ajax.php'),
+        'homeurl' =>  esc_url(get_home_url()),
+    ]);
+}
+add_action("wp_enqueue_scripts", "js_enqueue_scripts");

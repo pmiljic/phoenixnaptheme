@@ -43,7 +43,9 @@ $form_max_chars = carbon_get_theme_option('crb_contact_form_max_chars');
             <input type="text" class="form-control" id="inputCity" placeholder="<?php esc_attr_e('City...', 'phoenixnaptheme'); ?>">
         </div>
         <div class="form-group col-md-6 col-lg-6 col-xl-4 contact-form__div-padding">
-            <span class="contact-form__div-padding__caret"> <i class="fa fa-angle-down fa-xs"></i></span>
+            <span class="contact-form__div-padding__caret">
+                <i class="fa fa-angle-down fa-xs"></i>
+            </span>
             <label class="contact-label" for="inputState"><?php esc_html_e('State/Region', 'phoenixnaptheme'); ?></label>
             <select id="inputState" class="form-control form-control-select">
                 <option selected><?php esc_html_e('Select your state/region...', 'phoenixnaptheme'); ?></option>
@@ -66,7 +68,7 @@ $form_max_chars = carbon_get_theme_option('crb_contact_form_max_chars');
         <div class="form-group col-lg-12 col-xl-8 contact-form__div-padding">
             <label class="contact-label" for="inputTellUsMore"><?php esc_html_e('Tell us more', 'phoenixnaptheme'); ?></label>
             <span class="maximum-comment"><strong class="char-count"><?php echo $form_max_chars ?></strong> <?php esc_html_e('chars allowed', 'phoenixnaptheme'); ?></span>
-            <textarea data-length=<?php echo $form_max_chars ?> rows="4" type="text" class="form-control form-control-more char-textarea" id="inputTellUsMore" placeholder="<?php esc_attr_e('Tell us more...', 'phoenixnaptheme'); ?>"></textarea>
+            <textarea maxlength=<?php echo $form_max_chars ?> rows="4" type="text" class="form-control form-control-more char-textarea" id="inputTellUsMore" placeholder="<?php esc_attr_e('Tell us more...', 'phoenixnaptheme'); ?>"></textarea>
         </div>
     </div>
     <div class="form-row justify-content-center">
@@ -94,38 +96,10 @@ $form_max_chars = carbon_get_theme_option('crb_contact_form_max_chars');
 </form>
 
 <script>
-    $(".char-textarea").on("keyup", function(event) {
-        checkTextAreaMaxLength(this, event);
+    $('.char-textarea').on('keyup', function(e) {
+        var maxLength = parseInt($(this).attr('maxlength'));
+        var length = $(this).val().length;
+        var length = maxLength - length;
+        $('.char-count').text(length);
     });
-
-    /*
-    Checks the MaxLength of the Textarea
-    -----------------------------------------------------
-    @prerequisite:	textBox = textarea dom element
-                    e = textarea event
-                    length = Max length of characters
-    */
-    function checkTextAreaMaxLength(textBox, e) {
-
-        var maxLength = parseInt($(textBox).data("length"));
-
-
-        if (!checkSpecialKeys(e)) {
-            if (textBox.value.length > maxLength - 1) textBox.value = textBox.value.substring(0, maxLength);
-        }
-        $(".char-count").html(maxLength - textBox.value.length);
-
-        return true;
-    }
-    /*
-    Checks if the keyCode pressed is inside special chars
-    -------------------------------------------------------
-    @prerequisite:	e = e.keyCode object for the key pressed
-    */
-    function checkSpecialKeys(e) {
-        if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
-            return false;
-        else
-            return true;
-    }
 </script>

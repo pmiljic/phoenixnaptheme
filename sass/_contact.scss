@@ -82,7 +82,7 @@
 
   .label-i {
     font-size: 6px;
-    color: red;
+    color: #ff0000;
     position: absolute;
     top: 5px;
   }
@@ -95,7 +95,7 @@
     color: $primary-color;
     strong {
       font-weight: 400;
-      color: green;
+      color: #008000;
     }
   }
 }
