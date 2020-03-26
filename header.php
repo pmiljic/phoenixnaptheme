@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script text="text/js" src="/wp-content/themes/phoenixnaptheme/js/jquery-3.3.1.slim.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/phoenixnaptheme/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/phoenixnaptheme/css/main.css">
-    <script type="text/javascript" src="/wp-content/themes/phoenixnaptheme/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/wp-content/themes/phoenixnaptheme/fontawesome-free-5.12.1-web/css/all.min.css">
     <?php get_the_title(); ?>
     <?php wp_head(); ?>
 </head>

@@ -1,6 +1,4 @@
-/*---Header--*/
 header {
-  //background-color: $color-top-header;
   .menu {
     padding: 20px 40px;
 
@@ -8,12 +6,18 @@ header {
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 10px;
-
+      &-btn {
+        padding: 5px 5px;
+        .btn {
+          width: 105px;
+          color: $color-icon-light;
+          font-size: smaller;
+        }
+      }
       i {
         color: $primary-color;
         padding-right: 7px;
       }
-
       a {
         font-size: 12px;
         color: $color-icon-light;
@@ -21,14 +25,6 @@ header {
         &:hover {
           color: $white;
           text-decoration: none;
-        }
-      }
-      &-btn {
-        padding: 5px 5px;
-        .btn {
-          width: 105px;
-          color: $color-icon-light;
-          font-size: smaller;
         }
       }
     }

@@ -31,7 +31,6 @@ if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_
                         </div>
                     </div>
 
-
                     <div class="col-lg-6">
                         <div class="section__seen">
                             <div class="image-div">
@@ -49,7 +48,6 @@ if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_
                                     </div>
                                 </div>
                             <?php endif; ?>
-
                         </div>
                     </div>
 

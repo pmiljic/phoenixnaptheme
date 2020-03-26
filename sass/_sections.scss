@@ -1,8 +1,5 @@
 .section {
   padding: 120px 0;
-  // &__two {
-  //   background-color: $color-background-white;
-  // }
 
   &__title {
     margin-bottom: 20px;
@@ -12,11 +9,9 @@
 
   &__list {
     padding-left: 25px;
-
     li {
       margin-top: 10px;
       color: $light-blue-color;
-
       span {
         color: $color-text-default;
       }
@@ -37,7 +32,6 @@
     &__items {
       margin-right: -3px;
       margin-left: -3px;
-
       a {
         margin: 0 3px;
         padding: 10px;

@@ -44,7 +44,7 @@ $instagram = carbon_get_theme_option('crb_instagram');
         </div>
 
         <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-md-6 footer-bottom__col">
+            <div class="col-12 col-lg-6 footer-bottom__col">
                 <?php
                 if (has_nav_menu('footer-menu')) {
                     wp_nav_menu(
@@ -57,14 +57,14 @@ $instagram = carbon_get_theme_option('crb_instagram');
                 ?>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
                 <p><?php echo esc_html($copyrigths) ?></p>
             </div>
 
         </div>
     </div>
 </footer>
-
 </body>
 
 </html>
+<?php wp_footer(); ?>
