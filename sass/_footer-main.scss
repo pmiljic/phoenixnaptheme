@@ -3,6 +3,10 @@
   padding: 60px;
   padding-left: 90px;
 
+  &__column {
+    padding-bottom: 15px;
+  }
+
   a {
     color: $color-footer-links;
     padding-bottom: 12px;
@@ -11,5 +15,13 @@
       color: $white;
       text-decoration: none;
     }
+  }
+  li {
+    list-style-type: none;
+    padding-bottom: 10px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
   }
 }

@@ -11,6 +11,7 @@
         position: absolute;
         right: 30px;
         bottom: 15px;
+        pointer-events: none;
       }
     }
   }
@@ -30,6 +31,14 @@
     padding-left: 10px;
   }
 
+  &__text {
+    text-align: center;
+  }
+
+  &__info {
+    padding-top: 15px;
+  }
+
   .form-control {
     padding-left: 20px;
     height: 45px;
@@ -40,11 +49,12 @@
       font-style: italic;
       -webkit-appearance: none;
       -moz-appearance: none;
+      -o-appearance: none;
     }
 
-    &-select::-ms-expand {
-      display: none;
-    }
+    // &-select::-ms-expand {
+    //   display: none;
+    // }
 
     &-more {
       resize: none;

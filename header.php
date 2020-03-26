@@ -29,7 +29,12 @@
                             <?php foreach ($contact_menu as $menu_item) : ?>
                                 <div class="header-menu__item d-flex align-items-center">
                                     <i class="far fa-<?php esc_html_e($menu_item['icon_name']) ?>"></i>
-                                    <a href="#" class="header-href"><?php esc_html_e($menu_item['title']) ?></a>
+                                    <?php if (empty($menu_item['phone'])) : ?>
+                                        <a href="#" class="header-href"><?php esc_html_e($menu_item['title']) ?></a>
+                                    <?php else : ?>
+                                        <a href="tel:<?php esc_html_e($menu_item['phone']) ?>" class="header-href">
+                                            <?php esc_html_e($menu_item['title'] . ' | ' . $menu_item['phone']) ?></a>
+                                    <?php endif; ?>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>

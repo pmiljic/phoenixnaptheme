@@ -1,13 +1,26 @@
 /*---Banner--*/
 .banner {
   // background-image: url("https://media.istockphoto.com/vectors/connection-technologies-for-business-futuristic-network-shape-on-vector-id947777818");
-  background-size: cover;
+  //background-size: cover;
   padding-top: 100px;
   padding-bottom: 50px;
+
+  &__left-div {
+    padding-bottom: 50px;
+  }
+
+  // &__slider {
+  //   background-size: cover;
+  //   padding-top: 100px;
+  //   padding-bottom: 50px;
+  // }
   // &__container {
   //   padding-top: 100px;
   //   padding-bottom: 50px;
   // }
+  .carousell {
+    position: absolute;
+  }
 
   &__title {
     position: relative;
@@ -32,9 +45,9 @@
     }
   }
 
-  &__row {
-    padding-top: 50px;
-  }
+  // &__row {
+  //   padding-top: 50px;
+  // }
 
   a {
     font-size: 15px;
@@ -80,9 +93,9 @@
     font-weight: 700;
     padding-bottom: 15px;
   }
-  .carousel-indicators {
-    li {
-      color: red;
-    }
-  }
+  // .carousel-indicators {
+  //   li {
+  //     color: red;
+  //   }
+  // }
 }

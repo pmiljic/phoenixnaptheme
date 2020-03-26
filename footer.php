@@ -11,10 +11,10 @@ $instagram = carbon_get_theme_option('crb_instagram');
     <div class="container">
 
         <div class="row justify-content-between align-items-center footer-bottom__row">
-            <div class="col-6">
+            <div class="col-12 col-md-6 footer-bottom__col">
                 <a href="#"><img src=<?php echo esc_url($logo) ?>></a>
             </div>
-            <div class="col-6 d-flex justify-content-end align-items-center">
+            <div class="col-12 col-md-6 d-flex align-items-center footer-bottom__social">
                 <?php if ($google_plus) : ?>
                     <div class="social-logo d-flex align-items-center justify-content-center">
                         <a href="<?php echo $google_plus ?>"><i class="fab fa-google-plus-g"></i></a>
@@ -36,7 +36,7 @@ $instagram = carbon_get_theme_option('crb_instagram');
                     </div>
                 <?php endif; ?>
                 <?php if ($instagram) : ?>
-                    <div class="social-logo d-flex align-items-center justify-content-center">
+                    <div class="social-logo social-logo-last-element d-flex align-items-center justify-content-center">
                         <a href="<?php echo $instagram ?>"><i class="fab fa-instagram"></i></a>
                     </div>
                 <?php endif; ?>
@@ -44,7 +44,7 @@ $instagram = carbon_get_theme_option('crb_instagram');
         </div>
 
         <div class="row justify-content-center align-items-center">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-12 col-md-6 footer-bottom__col">
                 <?php
                 if (has_nav_menu('footer-menu')) {
                     wp_nav_menu(
@@ -57,7 +57,7 @@ $instagram = carbon_get_theme_option('crb_instagram');
                 ?>
             </div>
 
-            <div class="col-sm-12 col-md-6 footer-bottom_col">
+            <div class="col-12 col-md-6">
                 <p><?php echo esc_html($copyrigths) ?></p>
             </div>
 

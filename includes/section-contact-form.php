@@ -4,7 +4,7 @@ $form_description = carbon_get_theme_option('crb_contact_form_description');
 $form_max_chars = carbon_get_theme_option('crb_contact_form_max_chars');
 ?>
 <div class="row justify-content-center">
-    <div class="col-lg-12 col-xl-8 d-flex flex-column align-items-center">
+    <div class="col-lg-12 col-xl-8 d-flex flex-column contact__text">
         <h2><?php esc_html_e($form_title); ?></h2>
         <?php if ($form_description) : foreach ($form_description as $description) : ?>
                 <p><?php esc_html_e($description["paragraph"]); ?></p>
@@ -79,16 +79,15 @@ $form_max_chars = carbon_get_theme_option('crb_contact_form_max_chars');
     </div>
 
     <div class="form-row justify-content-center">
-        <div class="col-lg-12 col-xl-8 contact-form__div-padding">
-            <div class="d-flex justify-content-between contact-required">
-                <div class="contact-info d-flex">
-                    <i class="fas fa-star required-star contact-i"></i>
-                    <div class="div"><?php esc_html_e('Required fields', 'phoenixnaptheme'); ?></div>
-                </div>
-                <div class="contact-info">
-                    <?php esc_html_e('Your data is treated in compilance with ', 'phoenixnaptheme'); ?> <a href="#"><?php esc_html_e('GDPR', 'phoenixnaptheme'); ?>
-                    </a><?php esc_html_e('. Powered by ', 'phoenixnaptheme'); ?><i class="fas fa-project-diagram"></i>
-                </div>
+        <div class="col-lg-12 col-xl-8 contact-form__div-padding contact__required">
+            <!-- <div class="d-flex justify-content-between contact-required"> -->
+            <div class="contact__info d-flex">
+                <i class="fas fa-star required-star contact-i"></i>
+                <div class="div"><?php esc_html_e('Required fields', 'phoenixnaptheme'); ?></div>
+            </div>
+            <div class="contact__info">
+                <?php esc_html_e('Your data is treated in compilance with ', 'phoenixnaptheme'); ?> <a href="#"><?php esc_html_e('GDPR', 'phoenixnaptheme'); ?>
+                </a><?php esc_html_e('. Powered by ', 'phoenixnaptheme'); ?><i class="fas fa-project-diagram"></i>
             </div>
         </div>
     </div>

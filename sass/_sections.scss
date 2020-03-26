@@ -1,8 +1,8 @@
 .section {
   padding: 120px 0;
-  &__two {
-    background-color: $color-background-white;
-  }
+  // &__two {
+  //   background-color: $color-background-white;
+  // }
 
   &__title {
     margin-bottom: 20px;
@@ -26,6 +26,10 @@
   &__text {
     color: $color-text-default;
     line-height: 1.7;
+  }
+
+  .left-column {
+    padding-bottom: 60px;
   }
 
   .logos {

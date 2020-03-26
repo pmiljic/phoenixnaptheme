@@ -33,6 +33,7 @@ function crb_attach_theme_options()
             Field::make('complex', 'crb_contact_menu', __('Contact Entry', 'phoenixnaptheme'))
                 ->add_fields(array(
                     Field::make('text', 'title', __('Title', 'phoenixnaptheme')),
+                    Field::make('text', 'phone', __('Phone Number', 'phoenixnaptheme')),
                     Field::make('text', 'icon_name', __('Icon Name', 'phoenixnaptheme'))
                 )),
             Field::make('image', 'crb_menu_logo_photo',  __('Logo', 'phoenixnaptheme'))
@@ -43,6 +44,8 @@ function crb_attach_theme_options()
                     Field::make('text', 'title', __('Title', 'phoenixnaptheme')),
                     Field::make('text', 'caption', __('Caption', 'phoenixnaptheme')),
                     Field::make('text', 'btn_text', __('Button Text', 'phoenixnaptheme')),
+                    Field::make('image', 'photo', __('Banner image', 'phoenixnaptheme'))
+                        ->set_value_type('url')
                 )),
             Field::make('image', 'crb_banner_photo', __('Photo', 'phoenixnaptheme'))
                 ->set_value_type('url'),
@@ -133,3 +136,51 @@ function js_enqueue_scripts()
     ]);
 }
 add_action("wp_enqueue_scripts", "js_enqueue_scripts");
+
+
+//Register Sidebars
+function my_sidebars()
+{
+    register_sidebar(
+        array(
+            'name' => 'Footer Sidebar 1',
+            'id' => 'footer-sidebar1'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Sidebar 2',
+            'id' => 'footer-sidebar2'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Sidebar 3',
+            'id' => 'footer-sidebar3'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Sidebar 4',
+            'id' => 'footer-sidebar4'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Sidebar 5',
+            'id' => 'footer-sidebar5'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => 'Footer Sidebar 6',
+            'id' => 'footer-sidebar6'
+        )
+    );
+}
+add_action('widgets_init', 'my_sidebars');
